@@ -3,10 +3,10 @@ package com.prem02.snakeladder;
 // WELCOME TO SNAKE AND LADDER PROGRAMME
 
 /**
- * UC5 ENSURE THE PLAYER GETS TO EXCAT WINNING POSITION 100
+ * UC6 REPORT THE NUMBER OF TIMES DICE WAS PLAYED TO WIN THE GAME AND POSITION
  *
  * @author prem
- * @version 3.5
+ * @version 3.6
  * @since 10/08/2021
  */
 
@@ -14,22 +14,23 @@ public class SNAKELADDER {
     public static void main(String[] args) {
 
         int position = 0;
-
+        int diceRollCount = 0;
         System.out.println("position is " + position);
         int diceValue = (int) (Math.random() * 10) % 6 + 1;
         Utility utility = new Utility();
-        utility.playOption(position, diceValue);
+        utility.playOption(position, diceValue, diceRollCount);
 
     }
 }
 
 class Utility {
 
-    public void playOption(int position, int diceValue) {
+    public void playOption(int position, int diceValue, int diceRollCount) {
 
         while (position <= 99) {
 
             int optionValue = (int) (Math.random() * 10) % 3 + 1;
+            diceRollCount++;
 
             switch (optionValue) {
                 case 1:
@@ -55,6 +56,7 @@ class Utility {
                     break;
             }
         }
+        System.out.println("dice play number:: " + diceRollCount);
     }
 
 }
