@@ -3,10 +3,10 @@ package com.prem02.snakeladder;
 // WELCOME TO SNAKE AND LADDER PROGRAMME
 
 /**
- * UC4 REPEAT TILL THE PLAYER REACHES THE WINNING POSITION 100
+ * UC5 ENSURE THE PLAYER GETS TO EXCAT WINNING POSITION 100
  *
  * @author prem
- * @version 3.4
+ * @version 3.5
  * @since 10/08/2021
  */
 
@@ -17,7 +17,6 @@ public class SNAKELADDER {
 
         System.out.println("position is " + position);
         int diceValue = (int) (Math.random() * 10) % 6 + 1;
-
         Utility utility = new Utility();
         utility.playOption(position, diceValue);
 
@@ -39,7 +38,10 @@ class Utility {
 
                 case 2:
                     position = (position + diceValue);
-
+                    if (position > 100) {
+                        position = (position - diceValue);
+                        continue;
+                    }
                     System.out.println("your position after ladder is :" + position);
                     break;
 
@@ -49,7 +51,7 @@ class Utility {
                     if (position < 0) {
                         position = 0;
                     }
-                    System.out.println("Your Position after snake is :" + position);
+                    System.out.println("Your Position after snake is" + position);
                     break;
             }
         }
