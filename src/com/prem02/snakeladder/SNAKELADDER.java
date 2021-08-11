@@ -17,7 +17,7 @@ public class SNAKELADDER {
         int position = 0;
         System.out.println("position is " + position);
         
-        //Taking die number by using random
+        //Taking die variable for dice number by using random
         int die = (int) (Math.random() * 10) % 6 + 1;
         System.out.println("dice value is " + die);
         
