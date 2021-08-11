@@ -12,14 +12,20 @@ package com.prem02.snakeladder;
 
 public class SNAKELADDER {
     public static void main(String[] args) {
-
+        
+        //Taking position variable for starting position and assign it zero
         int position = 0;
         System.out.println("position is " + position);
+        
+        //Taking die number by using random
         int die = (int) (Math.random() * 10) % 6 + 1;
         System.out.println("dice value is " + die);
+        
+        //Taking value variable by using random to compare with cases
         int value = (int) (Math.random() * 10) % 3 + 1;
         System.out.println("case number is " + value);
 
+        //computation
         switch (value) {
             case 1:
                 System.out.println("No Play You are in the same position.");
