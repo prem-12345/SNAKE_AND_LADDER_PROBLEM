@@ -32,10 +32,6 @@ public class SNAKELADDER {
 
             case 3:
                 position = (position - die);
-
-                if (position < 0) {
-                    position = 0;
-                }
                 System.out.println("Your Position after snake is::" + position);
                 break;
         }
