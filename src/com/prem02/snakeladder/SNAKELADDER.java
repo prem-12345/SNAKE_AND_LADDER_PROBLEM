@@ -12,14 +12,22 @@ package com.prem02.snakeladder;
 
 public class SNAKELADDER {
     public static void main(String[] args) {
-
+        
+        //Taking positionPlayer variable for player1 and player2 for starting position and assign it zero
         int positionPlayer1 = 0;
         int positionPlayer2 = 0;
+        
+        //Taking diceRollCount variable for number of dice play
         int diceRollCount = 0;
+        
         System.out.println("Player 1 position is ::" + positionPlayer1);
         System.out.println("Player 2 position is ::" + positionPlayer2);
+        
+        //Taking diceValPlayer variable for player1 and player2 for dice number by using random
         int diceValPlayer1 = (int) (Math.random() * 10) % 6 + 1;
         int diceValPlayer2 = (int) (Math.random() * 10) % 6 + 1;
+        
+        //calling the class Utility
         Utility utility = new Utility();
         utility.playOption(positionPlayer1, positionPlayer2, diceValPlayer1, diceValPlayer2, diceRollCount);
 
@@ -28,6 +36,8 @@ public class SNAKELADDER {
 
 class Utility {
     public void playOption(int positionPlayer1, int positionPlayer2, int diceValPlayer1, int diceValPlayer2, int diceRollCount) {
+        
+        //computation
         while ((positionPlayer1 <= 99) && (positionPlayer2 <= 99)) {
             int optionValPlayer1 = (int) (Math.random() * 10) % 3 + 1;
             int optionValPlayer2 = (int) (Math.random() * 10) % 3 + 1;
